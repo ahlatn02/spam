@@ -4,15 +4,23 @@
   "description": "Discord spambot to level up profiles on other bots",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ajmeese7/spambot"
+    "url": "git://github.com/ajmeese7/spambot.git"
   },
-  "main": "bot.js",
+  "main": "app.js",
   "author": "Aaron Meese",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "discord.io": "^2.5.3",
+    "discord.js": "^11.2.1",
+    "winston": "^3.1.0"
   },
+  "bugs": {
+    "url": "https://github.com/ajmeese7/spambot/issues"
+  },
+  "homepage": "https://github.com/ajmeese7/spambot#readme",
+  "devDependencies": {},
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
 	"start": "node bot.js"
   }
 }
