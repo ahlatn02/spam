@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git://github.com/ajmeese7/spambot"
   },
-  "main": "bot.js",
+  "main": "app.js",
   "author": "Aaron Meese",
   "license": "MIT",
   "dependencies": {
