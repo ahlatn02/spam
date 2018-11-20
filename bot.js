@@ -54,7 +54,7 @@ client.on("message", async message => {
     sendSpamMessage();
   }
 
-  /*if (command === "prune") {
+  if (command === "xoa") {
     setTimeout(prune, 1000); // Theoretically waits long enough to avoid 10008 error
     function prune() {
       // IDEA: Only delete messages sent by current user? Use other bot validation...
@@ -66,7 +66,33 @@ client.on("message", async message => {
        })
       .catch(console.log); //.error
     }
-  }*/
+  }
+  
+   if(command === "stop"){
+  message.channel.send("180s!!!");
+ sleep = function(time) {
+  var stop = new Date().getTime();
+  while (new Date().getTime() < stop + time) {;
+  }
+  return new Promise((r, _) => r())
+}
+console.log("sleeping...")
+sleep(1000 * 180).then(() => console.log("awake"))
+  }
+  
+   if(command === "stopfff"){
+  message.channel.send("forever!!!");
+ sleep = function(time) {
+  var stop = new Date().getTime();
+  while (new Date().getTime() < stop + time) {;
+  }
+  return new Promise((r, _) => r())
+}
+console.log("sleeping...")
+sleep(1000 * 10000).then(() => console.log("awake"))
+  }
+  
+  
 });
 
 client.login(process.env.botToken);
