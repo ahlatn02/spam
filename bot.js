@@ -80,7 +80,7 @@ client.on("message", async message => {
     }
   }
       if(message.content === "xoa het đi") { 
-        message.channel.send("/stop")
+        message.channel.send("/xoa")
     } 
     
       if(message.content === "stop") { 
