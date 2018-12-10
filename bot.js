@@ -10,11 +10,15 @@ client.on("message", async message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
+     if(message.content === "xi pam") { 
+        message.channel.send("/spam");
+    } 
+  if(message.content === "hello meo") { 
+        message.channel.send("meo meo meo");
+    }
   if (message.author.id !== client.user.id || message.content.indexOf(client.config.prefix) !== 0) return;
   
-    if(message.content === "xi pam") { 
-        message.channel.send("/spam");
-    }
+ 
 
   if (command === "spam") {
     var count = 1; // Number of messages sent (modified by sendSpamMessage)
