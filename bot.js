@@ -73,13 +73,15 @@ client.on("message", async message => {
       message.channel.fetchMessages()
       .then(messages => {
         let message_array = messages.array();
-        message_array.length = 2;
+        message_array.length = 10;
         message_array.map(msg => msg.delete().catch(console.log)); //.error
        })
       .catch(console.log); //.error
     }
   }
-  
+      if(message.content === "xoa het đi") { 
+        message.channel.send("/stop")
+    } 
     
       if(message.content === "stop") { 
         message.channel.send("/stop")
