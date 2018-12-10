@@ -3,7 +3,9 @@ const client = new Discord.Client();
 const config = require('./config.json');
 client.config = config;
 
-console.log("Ready to level up!");
+client.on("ready", () => { // When the bot is ready
+    console.log("OK!"); // Log "Ready!"
+});
 
 client.on("message", async message => {
   const prefix = config.prefix;
