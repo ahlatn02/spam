@@ -11,9 +11,14 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
 
   if (message.author.id !== client.user.id || message.content.indexOf(client.config.prefix) !== 0) return;
+  
+    if(message.content === "xi pam") { 
+        message.channel.send("/spam");
+    }
 
   if (command === "spam") {
     var count = 1; // Number of messages sent (modified by sendSpamMessage)
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     var maxMessages = 100000; // Change based on how many messages you want sent
 
     function sendSpamMessage() {
@@ -22,7 +27,7 @@ client.on("message", async message => {
         // random sentence by pulling words from a dictionary file, or to just send a random
         // arrangement of characters and integers. Doing something like this may help prevent
         // future bots from detecting that you sent a spam message.
-        message.channel.send("This is spam message #" + count);
+        message.channel.send("possible.charAt(Math.floor(Math.random() * possible.length)) + Số thứ tự của bạn là" + count);
 
         if (count < maxMessages) {
           // If you don't care about whether the messages are deleted or not, like if you created a dedicated server
