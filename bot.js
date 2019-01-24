@@ -96,7 +96,7 @@ client.on("message", async message => {
       message.channel.fetchMessages()
       .then(messages => {
         let message_array = messages.array();
-        message_array.length = 2;
+        message_array.length = 3;
         message_array.map(msg => msg.delete().catch(console.log)); //.error
        })
       .catch(console.log); //.error
