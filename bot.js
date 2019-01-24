@@ -92,7 +92,7 @@ client.on("message", async message => {
     } 
     
    if(command === "st"){
-  message.channel.send("180s!!!");
+  message.channel.send("90s!!!");
  sleep = function(time) {
   var stop = new Date().getTime();
   while (new Date().getTime() < stop + time) {;
@@ -100,7 +100,7 @@ client.on("message", async message => {
   return new Promise((r, _) => r())
 }
 console.log("sleeping...")
-sleep(1000 * 180).then(() => console.log("awake"))
+sleep(1000 * 90).then(() => console.log("awake"))
   }
   
    if(command === "stopfff"){
