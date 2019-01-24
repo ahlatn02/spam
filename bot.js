@@ -19,9 +19,9 @@ client.on("message", async message => {
         message.channel.send("meo meo meo")
     }
        if(message.content === "xoa di") { 
-        message.channel.send("/xoa")
+        message.channel.send("/xoah")
     }
-        if(message.content === "xoa 1") { 
+        if(message.content === "xoa") { 
         message.channel.send("/xoa1")
     }
          if(message.content === "st") { 
@@ -75,7 +75,7 @@ client.on("message", async message => {
     sendSpamMessage();
   }
 
-  if (command === "xoa") {
+  if (command === "xoah") {
     setTimeout(prune, 1000); // Theoretically waits long enough to avoid 10008 error
     function prune() {
       // IDEA: Only delete messages sent by current user? Use other bot validation...
@@ -96,7 +96,7 @@ client.on("message", async message => {
       message.channel.fetchMessages()
       .then(messages => {
         let message_array = messages.array();
-        message_array.length = 3;
+        message_array.length = 4;
         message_array.map(msg => msg.delete().catch(console.log)); //.error
        })
       .catch(console.log); //.error
