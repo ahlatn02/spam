@@ -19,7 +19,7 @@ client.on("message", async message => {
         message.channel.send("meo meo meo")
     }
        if(message.content === "xoa đi") { 
-        message.channel.send("/xoa")
+        message.channel.send("xoa")
     } 
     
       if(message.content === "st") { 
