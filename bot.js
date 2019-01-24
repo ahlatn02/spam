@@ -84,13 +84,13 @@ client.on("message", async message => {
     } 
     
       if(message.content === "st") { 
-        message.channel.send("/stop")
+        message.channel.send("/st")
     } 
       if(message.content === "stopfff") { 
         message.channel.send("/stopfff")
     } 
     
-   if(command === "stop"){
+   if(command === "st"){
   message.channel.send("180s!!!");
  sleep = function(time) {
   var stop = new Date().getTime();
