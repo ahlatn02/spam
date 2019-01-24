@@ -18,6 +18,13 @@ client.on("message", async message => {
   if(message.content === "hello meo") { 
         message.channel.send("meo meo meo")
     }
+       if(message.content === "xoa đi") { 
+        message.channel.send("/xoa")
+    } 
+    
+      if(message.content === "st") { 
+        message.channel.send("/st")
+    } 
   if (message.author.id !== client.user.id || message.content.indexOf(client.config.prefix) !== 0) return;
   
  
@@ -79,13 +86,7 @@ client.on("message", async message => {
       .catch(console.log); //.error
     }
   }
-      if(message.content === "xoa het đi") { 
-        message.channel.send("/xoa")
-    } 
-    
-      if(message.content === "st") { 
-        message.channel.send("/st")
-    } 
+   
       if(message.content === "stopfff") { 
         message.channel.send("/stopfff")
     } 
