@@ -42,7 +42,7 @@ client.on("message", async message => {
         // random sentence by pulling words from a dictionary file, or to just send a random
         // arrangement of characters and integers. Doing something like this may help prevent
         // future bots from detecting that you sent a spam message.
-        message.channel.send(count + " Con mèo nhảy qua hàng rào và đi vào chuồng ngủ " + possible.charAt(Math.floor(Math.random(10) * possible.length)));
+        message.channel.send(" Con mèo thứ " + count + "nhảy qua hàng rào " + possible.charAt(Math.floor(Math.random(10) * possible.length)) + " và đi vào chuồng ngủ ");
           //possible.charAt(Math.floor(Math.random() * possible.length)) 
 
         if (count < maxMessages) {
