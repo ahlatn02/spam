@@ -42,8 +42,11 @@ client.on("message", async message => {
         // random sentence by pulling words from a dictionary file, or to just send a random
         // arrangement of characters and integers. Doing something like this may help prevent
         // future bots from detecting that you sent a spam message.
-        message.channel.send(" Con mèo thứ " + count + " nhảy qua hàng rào " + possible.charAt(Math.floor(Math.random(10) * possible.length)) + " và đi vào chuồng ngủ ");
-          //possible.charAt(Math.floor(Math.random() * possible.length)) 
+      /*  message.channel.send(" Con mèo thứ " + count + " nhảy qua hàng rào " + possible.charAt(Math.floor(Math.random(10) * possible.length)) + " và đi vào chuồng ngủ ");
+          //possible.charAt(Math.floor(Math.random() * possible.length))  */
+          
+          message.channel.send(count + possible.charAt(Math.floor(Math.random(10) * possible.length)));
+          //possible.charAt(Math.floor(Math.random() * possible.length))
 
         if (count < maxMessages) {
           // If you don't care about whether the messages are deleted or not, like if you created a dedicated server
